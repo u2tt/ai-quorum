@@ -14,7 +14,7 @@
 ## 快速开始
 
 ```bash
-git clone <repo-url> ai-quorum && cd ai-quorum
+git clone https://github.com/u2tt/ai-quorum.git && cd ai-quorum
 uv sync                                 # 依赖装进项目内 .venv，不污染系统 Python
 mkdir -p ~/.quorum && cp .env.example ~/.quorum/.env   # 至少填一个厂商的 API Key
 uv run debate                           # 打开 http://127.0.0.1:8770
@@ -245,16 +245,18 @@ quorum/
     app.py       FastAPI 路由（会话 / SSE 流 / 模型库）
     store.py     SQLite（模型、会话、隐藏列表）
     static/index.html   单文件前端（零外链、无构建）
-tests/           161 条 pytest（引擎、方法、传输、API、存储、配置、导出）
+tests/           169 条 pytest（引擎、方法、传输、API、存储、配置、导出）
 docs/            设计审计、主题变量表、界面截图
 ```
 
 ## 测试
 
 ```bash
-uv run pytest tests -q     # 161 passed
+uv run pytest tests -q     # 169 passed, 1 skipped
 ```
 
 ## 许可证
 
 MIT © 2026 Chen Xinyu
+
+配置字段与 [Quorum](https://github.com/Detrol/quorum-cli) 保持兼容；本项目为独立实现，所用方法学（牛津辩论、德尔菲法、苏格拉底式追问等）均为公开方法论。
